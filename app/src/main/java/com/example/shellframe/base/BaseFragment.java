@@ -14,11 +14,10 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseFragment extends Fragment {
-//    asdfasdf
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(layoutID(),null);
+        return inflater.inflate(layoutID(), null);
     }
 
     @Override
@@ -36,24 +35,33 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected abstract int layoutID();
-    protected  abstract void initView(View view);
+
+    protected abstract void initView(View view);
+
     protected abstract void loadData();
+
     protected abstract void initListener();
 
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        if(hidden){
+        if (hidden) {
             onHidden();
-        }else{
+        } else {
             setTitleBar();
             onShow();
         }
 
     }
-    public void onShow(){loadData();}
-    public void onHidden(){}
-    public void setTitleBar(){
+
+    public void onShow() {
+        loadData();
+    }
+
+    public void onHidden() {
+    }
+
+    public void setTitleBar() {
     }
 
 }
