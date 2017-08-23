@@ -1,61 +1,30 @@
 package com.example.shellframe.view;
 
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.shellframe.R;
 import com.example.shellframe.base.BaseActivity;
-import com.example.shellframe.presenter.IPresenterImpl;
 
-public class ShellActivity extends BaseActivity implements View.OnClickListener, IView {
+import java.sql.SQLException;
 
-    private Button button;
-    private TextView textView;
+public class ShellActivity extends BaseActivity {
 
 
     @Override
-    protected int getlayout() {
+    protected int layoutID() {
         return R.layout.activity_shell;
     }
 
     @Override
-    protected void initView() {
-
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(this);
-        textView = (TextView) findViewById(R.id.textView);
-        textView.setOnClickListener(this);
-    }
-
-    @Override
-    protected void initOnClicklistener() {
+    protected void initView() throws SQLException {
 
     }
 
     @Override
-    protected void initOperation() {
+    protected void loadData() {
 
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button:
-                IPresenterImpl loginPresenter = new IPresenterImpl(this);
-                loginPresenter.Getcontroller();
-                break;
-        }
-    }
+    protected void initListener() {
 
-    @Override
-    public void OnSucceed(String succed) {
-        textView.setText(succed);
-    }
-
-    @Override
-    public void OnDefeated() {
-        Toast.makeText(this, "失败了", Toast.LENGTH_SHORT).show();
     }
 }

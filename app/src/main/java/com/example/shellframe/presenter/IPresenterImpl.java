@@ -3,7 +3,6 @@ package com.example.shellframe.presenter;
 
 import com.example.shellframe.model.ModelImpl;
 import com.example.shellframe.model.entry.Bean;
-import com.example.shellframe.view.IView;
 
 import java.util.Map;
 
@@ -13,11 +12,10 @@ import io.reactivex.disposables.Disposable;
 
 
 public class IPresenterImpl implements IPresenter, Observer<Bean> {
-    private IView iView;
+
     private ModelImpl iModel;
 
-    public IPresenterImpl(IView iView) {
-        this.iView = iView;
+    public IPresenterImpl() {
         this.iModel = new ModelImpl();
     }
 
@@ -34,7 +32,7 @@ public class IPresenterImpl implements IPresenter, Observer<Bean> {
 
     @Override
     public void onDestroy() {
-        iView = null;
+
     }
 
 
@@ -45,12 +43,12 @@ public class IPresenterImpl implements IPresenter, Observer<Bean> {
 
     @Override
     public void onNext(@NonNull Bean bean) {
-        iView.OnSucceed(bean.toString());
+
     }
 
     @Override
     public void onError(@NonNull Throwable e) {
-        iView.OnDefeated();
+
     }
 
     @Override
