@@ -9,11 +9,10 @@ import com.example.shellframe.base.BaseFragment;
 
 /**
  * Created by YC on 2017/4/12.
- *
  */
 
 public class FragmentBuilder {
-
+    private BaseFragment lastFragment;
     private FragmentManager fragmentManager;
     private BaseFragment fragment;
     private FragmentTransaction fragmentTransaction;
@@ -68,6 +67,14 @@ public class FragmentBuilder {
         App.baseFragment = fragment;
         fragmentTransaction.commit();
         return fragment;
+    }
+
+    public BaseFragment getLastFragment() {
+        return lastFragment;
+    }
+
+    public void setLastFragment(BaseFragment lastFragment) {
+        this.lastFragment = lastFragment;
     }
 
     public static void clean() {

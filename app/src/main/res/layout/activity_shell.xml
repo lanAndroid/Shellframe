@@ -16,28 +16,31 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x115"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="3dp">
 
         <RadioButton
             android:id="@+id/home_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/shell_btn"
             android:button="@null"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_home_normal"
             android:gravity="center"
             android:text="首页" />
 
         <RadioButton
-
             android:id="@+id/streaming_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/shell_btn"
             android:button="@null"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:drawableTop="@drawable/tab_panda_live_normal"
             android:gravity="center"
             android:text="熊猫直播" />
 
@@ -46,8 +49,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/shell_btn"
             android:button="@null"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:drawableTop="@drawable/tab_panda_culture_normals"
             android:gravity="center"
             android:text="滚滚视频" />
 
@@ -56,8 +60,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/shell_btn"
             android:button="@null"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:drawableTop="@drawable/tab_panda_eye_normal"
             android:gravity="center"
             android:text="熊猫播报" />
 
@@ -66,8 +71,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/shell_btn"
             android:button="@null"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:drawableTop="@drawable/tab_live_china_normal"
             android:gravity="center"
             android:text="直播中国" />
     </RadioGroup>
