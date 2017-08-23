@@ -2,9 +2,9 @@ package com.example.shellframe.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.shellframe.App;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.sql.SQLException;
 
@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
  * Created by xiaogang on 2017/6/20.
  */
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AutoLayoutActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +30,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         loadData();
         initListener();
     }
+
     protected abstract int layoutID();
-    protected  abstract void initView() throws SQLException;
+
+    protected abstract void initView() throws SQLException;
+
     protected abstract void loadData();
+
     protected abstract void initListener();
 
     @Override
