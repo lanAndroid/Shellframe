@@ -1,9 +1,14 @@
 package com.example.shellframe.view;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.Process;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.shellframe.R;
 import com.example.shellframe.Utils.FragmentBuilder;
@@ -18,6 +23,7 @@ import com.example.shellframe.view.Video.VideoFragment;
 import java.sql.SQLException;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ShellActivity extends BaseActivity {
@@ -32,6 +38,13 @@ public class ShellActivity extends BaseActivity {
     RadioButton announceBtn;
     @BindView(R.id.live_btn)
     RadioButton liveBtn;
+    @BindView(R.id.shell_tv)
+    TextView shellTv;
+    @BindView(R.id.radioGroup)
+    RadioGroup radioGroup;
+    @BindView(R.id.shell_log)
+    ImageView shellLog;
+
 
     @Override
     protected int layoutID() {
@@ -54,29 +67,38 @@ public class ShellActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.home_btn, R.id.streaming_btn, R.id.video_btn, R.id.announce_btn, R.id.live_btn})
+    @OnClick({R.id.home_btn, R.id.streaming_btn, R.id.video_btn, R.id.announce_btn, R.id.live_btn, R.id.shell_log})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.home_btn:
                 FragmentBuilder.getInstance().start(HomeFragment.class, R.id.overall_frame).builder();
-
+                shellTv.setText("");
                 break;
             case R.id.streaming_btn:
                 FragmentBuilder.getInstance().start(StreamingFragment.class, R.id.overall_frame).builder();
+                shellTv.setText("熊猫直播");
                 //   FragmentBuilder.getInstance().builder();
                 break;
             case R.id.video_btn:
                 FragmentBuilder.getInstance().start(VideoFragment.class, R.id.overall_frame).builder();
+                shellTv.setText("滚滚视频");
                 //    FragmentBuilder.getInstance().builder();
                 break;
             case R.id.announce_btn:
                 FragmentBuilder.getInstance().start(AnnounceFragment.class, R.id.overall_frame).builder();
+
+                shellTv.setText("熊猫播报");
                 //     FragmentBuilder.getInstance().builder();
                 break;
             case R.id.live_btn:
                 FragmentBuilder.getInstance().start(LiveFragment.class, R.id.overall_frame).builder();
+                shellTv.setText("直播中国");
                 //    FragmentBuilder.getInstance().builder();
                 break;
+            case R.id.shell_log:
+                startActivity(new Intent(ShellActivity.this, LogActivity.class));
+                break;
+
         }
         //    FragmentBuilder.getInstance().builder();
     }
@@ -100,4 +122,15 @@ public class ShellActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
+
+    @OnClick()
+    public void onViewClicked() {
+
+    }
 }

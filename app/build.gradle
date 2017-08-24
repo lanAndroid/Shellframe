@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin:'org.greenrobot.greendao'
-apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
@@ -38,7 +37,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    compile'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.zhy:autolayout:1.4.5'
+
 
 }

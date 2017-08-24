@@ -8,7 +8,6 @@ import java.util.Map;
 import io.reactivex.Observer;
 
 
-
 public class ModelImpl implements IModel {
 
     @Override
