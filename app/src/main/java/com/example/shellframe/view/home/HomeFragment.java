@@ -1,4 +1,4 @@
-package com.example.shellframe.view.Home;
+package com.example.shellframe.view.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
