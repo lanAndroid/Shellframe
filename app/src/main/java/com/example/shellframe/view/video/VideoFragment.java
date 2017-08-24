@@ -1,11 +1,11 @@
-package com.example.shellframe.view.Video;
+package com.example.shellframe.view.video;
 
 import android.view.View;
 
 import com.example.shellframe.R;
 import com.example.shellframe.base.BaseFragment;
 
-,
+
 
 /**
  * @username tian

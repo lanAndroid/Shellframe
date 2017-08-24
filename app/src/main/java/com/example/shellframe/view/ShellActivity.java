@@ -14,11 +14,11 @@ import com.example.shellframe.R;
 import com.example.shellframe.Utils.FragmentBuilder;
 import com.example.shellframe.base.BaseActivity;
 import com.example.shellframe.base.BaseFragment;
-import com.example.shellframe.view.Announce.AnnounceFragment;
-import com.example.shellframe.view.Home.HomeFragment;
-import com.example.shellframe.view.LiveChina.LiveFragment;
-import com.example.shellframe.view.Streaming.StreamingFragment;
-import com.example.shellframe.view.Video.VideoFragment;
+import com.example.shellframe.view.announce.AnnounceFragment;
+import com.example.shellframe.view.home.HomeFragment;
+import com.example.shellframe.view.livechina.LiveFragment;
+import com.example.shellframe.view.pandalive.PandaLiveFragment;
+import com.example.shellframe.view.video.VideoFragment;
 
 import java.sql.SQLException;
 
@@ -75,7 +75,7 @@ public class ShellActivity extends BaseActivity {
                 shellTv.setText("");
                 break;
             case R.id.streaming_btn:
-                FragmentBuilder.getInstance().start(StreamingFragment.class, R.id.overall_frame).builder();
+                FragmentBuilder.getInstance().start(PandaLiveFragment.class, R.id.overall_frame).builder();
                 shellTv.setText("熊猫直播");
                 //   FragmentBuilder.getInstance().builder();
                 break;
@@ -109,7 +109,7 @@ public class ShellActivity extends BaseActivity {
         FragmentManager manager = getSupportFragmentManager();
         FragmentManager.BackStackEntry entry = manager.getBackStackEntryAt(manager.getBackStackEntryCount() - 1);
         String name = entry.getName();
-        if ("HomeFragment".equals(name) || "StreamingFragment".equals(name)
+        if ("HomeFragment".equals(name) || "PandaLiveFragment".equals(name)
                 || "VideoFragment".equals(name) || "AnnounceFragment".equals(name) || "LiveFragment".equals(name)) {
             Process.killProcess(Process.myPid());
             System.exit(0);

@@ -1,4 +1,4 @@
-package com.example.shellframe.view.LiveChina;
+package com.example.shellframe.view.pandalive;
 
 import android.view.View;
 
@@ -9,10 +9,10 @@ import com.example.shellframe.base.BaseFragment;
  * Created by 张豫耀 on 2017/8/23.
  */
 
-public class LiveFragment extends BaseFragment {
+public class PandaLiveFragment extends BaseFragment {
     @Override
     protected int layoutID() {
-        return R.layout.live_fragment;
+        return R.layout.pandalive_fragment;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.shellframe.view.Streaming;
+package com.example.shellframe.view.livechina;
 
 import android.view.View;
 
@@ -9,10 +9,10 @@ import com.example.shellframe.base.BaseFragment;
  * Created by 张豫耀 on 2017/8/23.
  */
 
-public class StreamingFragment extends BaseFragment {
+public class LiveFragment extends BaseFragment {
     @Override
     protected int layoutID() {
-        return R.layout.streaming_fragment;
+        return R.layout.live_fragment;
     }
 
     @Override
