@@ -1,6 +1,7 @@
 package com.example.shellframe.model;
 
 import com.example.shellframe.model.entry.Bean;
+import com.example.shellframe.model.entry.HomeBean;
 import com.example.shellframe.model.retrofit.RetrofitUtils;
 
 import java.util.Map;
@@ -20,5 +21,10 @@ public class ModelImpl implements IModel {
     @Override
     public void RequestPost(Map<String, String> map, Observer<Bean> observer) {
         RetrofitUtils.getmRetrofitUtils_Demo().PostNetwork(map, observer);
+    }
+
+    @Override
+    public void RequestHomeGet(Map<String, String> map, Observer<HomeBean> observer) {
+        RetrofitUtils.getmRetrofitUtils_Demo().GetHomeNetwork(map, observer);
     }
 }

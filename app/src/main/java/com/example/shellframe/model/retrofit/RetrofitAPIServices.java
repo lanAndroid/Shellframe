@@ -1,6 +1,8 @@
 package com.example.shellframe.model.retrofit;
 
+import com.example.shellframe.Utils.UrlUtils;
 import com.example.shellframe.model.entry.Bean;
+import com.example.shellframe.model.entry.HomeBean;
 
 import java.util.Map;
 
@@ -22,4 +24,7 @@ public interface RetrofitAPIServices {
 
     @GET("http://123.206.14.104:8080/TakeoutService/home?latitude=116.30142&longitude=40.05087")
     Observable<Bean> getServicesGET();
+
+    @GET(UrlUtils.HOMEURLALL)
+    Observable<HomeBean> getHomeGET();
 }
