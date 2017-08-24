@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 public class HelloActivity extends BaseActivity {
 
-// asd33
+
     @Override
     protected int layoutID() {
         return R.layout.activity_hello;

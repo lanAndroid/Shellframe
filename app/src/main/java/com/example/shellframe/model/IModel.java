@@ -12,4 +12,6 @@ public interface IModel {
     void RequestGet(Observer<Bean> observer);
 
     void RequestPost(Map<String, String> map, Observer<Bean> observer);
+
+
 }
