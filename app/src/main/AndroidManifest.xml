@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ShellActivity"></activity>
+        <activity android:name=".view.ShellActivity">
+
+        </activity>
         <activity android:name=".view.HelloActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,14 +23,19 @@
             </intent-filter>
         </activity>
 
+
         <meta-data
             android:name="design_width"
-            android:value="768" />
+            android:value="1080"></meta-data>
         <meta-data
             android:name="design_height"
-            android:value="1280" />
-
-        <activity android:name=".view.LogActivity"></activity>
+            android:value="1920"></meta-data>
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
     </application>
 
 </manifest>
