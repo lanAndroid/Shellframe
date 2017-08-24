@@ -1,4 +1,4 @@
-package com.example.shellframe.model.GreenDao;
+package com.example.shellframe.model.greenDao;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;

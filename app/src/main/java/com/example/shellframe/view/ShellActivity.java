@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.shellframe.R;
-import com.example.shellframe.Utils.FragmentBuilder;
+import com.example.shellframe.utils.FragmentBuilder;
 import com.example.shellframe.base.BaseActivity;
 import com.example.shellframe.base.BaseFragment;
 import com.example.shellframe.view.announce.AnnounceFragment;

@@ -1,4 +1,4 @@
-package com.example.shellframe.Utils;
+package com.example.shellframe.utils;
 
 /**
  * Created by 张豫耀 on 2017/8/23.

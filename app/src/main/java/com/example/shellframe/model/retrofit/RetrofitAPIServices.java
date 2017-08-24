@@ -1,6 +1,6 @@
 package com.example.shellframe.model.retrofit;
 
-import com.example.shellframe.Utils.UrlUtils;
+import com.example.shellframe.utils.UrlUtils;
 import com.example.shellframe.model.entry.Bean;
 import com.example.shellframe.model.entry.HomeBean;
 
