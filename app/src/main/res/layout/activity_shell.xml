@@ -6,11 +6,32 @@
     android:layout_height="match_parent"
     tools:context="com.example.shellframe.view.ShellActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/shell_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
     <FrameLayout
         android:id="@+id/overall_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/radioGroup" />
+        android:layout_above="@+id/radioGroup"
+        android:layout_below="@+id/toolbar" />
 
 
     <RadioGroup
@@ -53,14 +74,13 @@
             android:layout_weight="1"
             android:background="@drawable/shell_btn"
             android:button="@null"
-            android:paddingTop="18px"
             android:drawableTop="@mipmap/tab_panda_culture_normals"
             android:gravity="center"
+            android:paddingTop="18px"
             android:text="滚滚视频" />
 
         <RadioButton
             android:id="@+id/announce_btn"
-            android:paddingTop="18px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -68,11 +88,11 @@
             android:button="@null"
             android:drawableTop="@mipmap/tab_panda_eye_normal"
             android:gravity="center"
+            android:paddingTop="18px"
             android:text="熊猫播报" />
 
         <RadioButton
             android:id="@+id/live_btn"
-            android:paddingTop="18px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -80,7 +100,19 @@
             android:button="@null"
             android:drawableTop="@mipmap/tab_live_china_normal"
             android:gravity="center"
+            android:paddingTop="18px"
             android:text="直播中国" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/shell_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/overall_frame"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@mipmap/person_sign" />
 
 </com.zhy.autolayout.AutoRelativeLayout>
