@@ -14,7 +14,7 @@ public class HomeFragment extends BaseFragment {
     protected int layoutID() {
         return R.layout.home_fragment;
     }
-
+//asd
     @Override
     protected void initView(View view) {
 
