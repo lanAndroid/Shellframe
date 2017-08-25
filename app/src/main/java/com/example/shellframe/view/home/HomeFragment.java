@@ -40,6 +40,7 @@ public class HomeFragment extends BaseFragment implements IHomeFragment{
    private Banner mybanner;
     private TextView livetv;
     private TextView findtv;
+    //33
 
 
     private List<HomeBean.DataBean.BigImgBean> bigImg=new ArrayList<>();
