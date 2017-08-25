@@ -1,5 +1,6 @@
 package com.example.shellframe.model.retrofit;
 
+import com.example.shellframe.model.entry.AnnBean;
 import com.example.shellframe.model.entry.Bean;
 
 import java.util.Map;
@@ -50,5 +51,9 @@ public class RetrofitUtils {
     public void GetNetwork(Observer<Bean> observer) {
         Observable<Bean> services = apiServices.getServicesGET();
         services.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
+    }
+    public void annGetNetWork(Observer<AnnBean> observer){
+        Observable<AnnBean> annBeanObservable = apiServices.annServicesGET();
+        annBeanObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
     }
 }

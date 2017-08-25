@@ -1,5 +1,7 @@
 package com.example.shellframe.presenter.annpresenter;
 
-public interface AnnIPresenter {
+import com.example.shellframe.model.entry.AnnBean;
 
+public interface AnnIPresenter {
+    void annGet();
 }
