@@ -37,7 +37,7 @@ Map<String,String> map=new HashMap<>();
             @Override
             public void onNext(@NonNull HomeBean homeBean) {
                 Log.e("TAG","传值了");
-                mIhomeFragment.gethomebean(homeBean);
+                mIhomeFragment.gethomebeans(homeBean);
             }
 
             @Override

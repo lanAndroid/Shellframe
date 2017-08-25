@@ -7,5 +7,6 @@ import com.example.shellframe.model.entry.HomeBean;
  */
 
 public interface  IHomeFragment {
-    void gethomebean(HomeBean homeBean);
+    void gethomebeans(HomeBean homeBean);
+    void  OnEnrrry(String str);
 }

@@ -52,12 +52,10 @@ public class RetrofitUtils {
         Observable<Bean> services = apiServices.getServicesGET();
         services.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
 
-        Observable<HomeBean> homeBeanObservable=apiServices.getHomeGET();
 
-        services.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
     }
     //首页 网络请求
-    public void GetHomeNetwork(Map<String, String> map, Observer<HomeBean> observer) {
+    public void GetHomeNetwork(Observer<HomeBean> observer) {
 
         Observable<HomeBean> homeBeanObservable=apiServices.getHomeGET();
 

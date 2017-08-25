@@ -55,6 +55,7 @@ public class HomeFragment extends BaseFragment implements IHomeFragment{
     @Override
     protected void initView(View view) {
     homeIPresenter=new HomePresenterImpl(this);
+        homeIPresenter.getHomeBean();
 
 
 
@@ -120,7 +121,7 @@ public class HomeFragment extends BaseFragment implements IHomeFragment{
     }
 
     @Override
-    public void gethomebean(HomeBean homeBean) {
+    public void gethomebeans(HomeBean homeBean) {
 
         HomeBean.DataBean data = homeBean.getData();
         bigImg = data.getBigImg();
@@ -131,6 +132,11 @@ public class HomeFragment extends BaseFragment implements IHomeFragment{
 
 
 
+
+    }
+
+    @Override
+    public void OnEnrrry(String str) {
 
     }
 }
