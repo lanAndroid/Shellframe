@@ -25,6 +25,6 @@ public class ModelImpl implements IModel {
 
     @Override
     public void RequestHomeGet(Map<String, String> map, Observer<HomeBean> observer) {
-        RetrofitUtils.getmRetrofitUtils_Demo().GetHomeNetwork(map, observer);
+        RetrofitUtils.getmRetrofitUtils_Demo().GetHomeNetwork(observer);
     }
 }
