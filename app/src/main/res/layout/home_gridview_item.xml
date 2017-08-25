@@ -24,7 +24,7 @@
         android:id="@+id/home_grid_livebroad"
         android:layout_width="match_parent"
         android:layout_height="900px"
-        android:numColumns="auto_fit"
+        android:numColumns="3"
         android:layout_marginBottom="10px"
         ></GridView>
     <TextView
@@ -44,10 +44,10 @@
         android:layout_marginBottom="10px"
         />
     <GridView
-        android:id="@+id/home_grid_cctv"
+        android:id="@+id/home_grid_Marvellous"
         android:layout_width="match_parent"
         android:layout_height="800px"
-        android:numColumns="auto_fit"
+        android:numColumns="2"
         ></GridView>
 
 </com.zhy.autolayout.AutoLinearLayout>
