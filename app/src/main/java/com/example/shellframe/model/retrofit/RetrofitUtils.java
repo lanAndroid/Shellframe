@@ -1,5 +1,6 @@
 package com.example.shellframe.model.retrofit;
 
+import com.example.shellframe.model.entry.AnnBean;
 import com.example.shellframe.model.entry.Bean;
 import com.example.shellframe.model.entry.HomeBean;
 
@@ -60,5 +61,9 @@ public class RetrofitUtils {
         Observable<HomeBean> homeBeanObservable=apiServices.getHomeGET();
 
         homeBeanObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
+    }
+    public void annGetNetWork(Observer<AnnBean> observer){
+        Observable<AnnBean> annBeanObservable = apiServices.annServicesGET();
+        annBeanObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
     }
 }

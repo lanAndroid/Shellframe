@@ -24,6 +24,8 @@ public class ModelImpl implements IModel {
     }
 
     @Override
+    public void AnnRequsetGet(Observer<AnnBean> observer) {
+        RetrofitUtils.getmRetrofitUtils_Demo().annGetNetWork(observer);
     public void RequestHomeGet(Map<String, String> map, Observer<HomeBean> observer) {
         RetrofitUtils.getmRetrofitUtils_Demo().GetHomeNetwork(observer);
     }
