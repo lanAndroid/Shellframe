@@ -52,10 +52,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
-                        android:layout_width="160px"
+                        android:layout_width="220px"
                         android:layout_height="80px"
                         android:text="Live"
-
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
                         android:background="@drawable/home_text_shep"
                         android:textColor="@color/colorAccent"
 
@@ -67,6 +68,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:layout_width="220px"
+                        android:layout_height="80px"
+                        android:text="发现"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/home_text_shep"
+                        android:textColor="@color/colorAccent"
+
+                        android:textSize="60px"
+                        />
                 </LinearLayout>
 
             </LinearLayout>

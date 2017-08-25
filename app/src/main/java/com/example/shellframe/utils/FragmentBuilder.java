@@ -1,4 +1,4 @@
-package com.example.shellframe.Utils;
+package com.example.shellframe.utils;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;

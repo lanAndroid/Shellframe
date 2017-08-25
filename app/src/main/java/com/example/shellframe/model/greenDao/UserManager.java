@@ -1,4 +1,4 @@
-package com.example.shellframe.model.GreenDao;
+package com.example.shellframe.model.greenDao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
