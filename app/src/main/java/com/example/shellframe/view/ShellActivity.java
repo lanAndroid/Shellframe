@@ -58,7 +58,7 @@ public class ShellActivity extends BaseActivity {
     @Override
     protected void loadData() {
         FragmentBuilder.getInstance().start(HomeFragment.class, R.id.overall_frame).builder();
-        //     FragmentBuilder.getInstance().builder();
+        //     FragmentBuilder.getInstance().builder();11
     }
 
     @Override
