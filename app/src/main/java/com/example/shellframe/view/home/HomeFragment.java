@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.shellframe.R;
 import com.example.shellframe.base.BaseFragment;
 import com.example.shellframe.model.entry.HomeBean;
 import com.example.shellframe.presenter.homepresenter.HomePresenterImpl;

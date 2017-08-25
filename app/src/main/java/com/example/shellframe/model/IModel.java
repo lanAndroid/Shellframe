@@ -3,6 +3,7 @@ package com.example.shellframe.model;
 
 import com.example.shellframe.model.entry.AnnBean;
 import com.example.shellframe.model.entry.Bean;
+import com.example.shellframe.model.entry.HomeBean;
 
 import java.util.Map;
 
@@ -15,4 +16,7 @@ public interface IModel {
     void RequestPost(Map<String, String> map, Observer<Bean> observer);
 
     void AnnRequsetGet(Observer<AnnBean> observer);
+
+
+    void RequestHomeGet(Observer<HomeBean> observer);
 }

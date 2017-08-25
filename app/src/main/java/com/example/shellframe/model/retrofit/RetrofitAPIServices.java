@@ -2,6 +2,8 @@ package com.example.shellframe.model.retrofit;
 
 import com.example.shellframe.model.entry.AnnBean;
 import com.example.shellframe.model.entry.Bean;
+import com.example.shellframe.model.entry.HomeBean;
+import com.example.shellframe.utils.UrlUtils;
 
 import java.util.Map;
 
@@ -25,4 +27,6 @@ public interface RetrofitAPIServices {
     Observable<Bean> getServicesGET();
     @GET("http://www.ipanda.com/kehuduan/video/index.json")
     Observable<AnnBean> annServicesGET();
+    @GET(UrlUtils.HOMEURLALL)
+    Observable<HomeBean> getHomeGET();
 }

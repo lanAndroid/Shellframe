@@ -9,7 +9,7 @@
         android:id="@+id/pl_live_multi_item_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/_no_net" />
+        android:src="@drawable/no_net" />
 
     <TextView
         android:id="@+id/pl_live_multi_item_name"
