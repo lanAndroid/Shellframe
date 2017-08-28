@@ -5,6 +5,7 @@ package com.example.shellframe.utils;
  */
 
 public class UrlUtils {
+    //mmmm
     //服务器地址
     public static final String BASEURL = "http://www.ipanda.com/kehuduan/";
     //首页
